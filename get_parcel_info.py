@@ -1,0 +1,69 @@
+#!/usr/bin/python2
+# -*- coding: utf-8 -*-
+"""
+Created on Wed Sep 16 16:24:22 2015
+
+@author: Moran
+"""
+
+import sys
+import requests
+
+
+towns = {
+    "3309": "City of Middletown",
+    "3311": "City of Newburgh",
+    "3313": "City of Port Jervis",
+    "3320": "Blooming Grove",
+    "3322": "Chester",
+    "3324": "Cornwall",
+    "3326": "Crawford",
+    "3328": "Deerpark",
+    "3330": "Goshen",
+    "3332": "Greenville",
+    "3334": "Hamptonburgh",
+    "3336": "Highlands",
+    "3338": "Minisink",
+    "3340": "Monroe",
+    "3342": "Montgomery",
+    "3344": "Mount",
+    "3346": "Newburgh",
+    "3348": "New Windsor",
+    "3350": "Tuxedo",
+    "3352": "Wallkill",
+    "3354": "Warwick",
+    "3356": "Wawayanda",
+    "3358": "Woodbury"
+}
+
+
+swis = sys.argv[1]
+pin = sys.argv[2]
+
+session = requests.session()
+BASE_URL = 'http://propertydata.orangecountygov.com/imate'
+
+# http://propertydata.orangecountygov.com/imate/viewlist.aspx?sort=printkey&swis=3311
+
+# get cookie
+towncode = str(swis)[0:4]
+
+search = '/'.join([BASE_URL, 'viewlist..aspx?sort=printkey&swis={towncode}'])
+
+r = session.post(search)
+
+print('cookies', requests.utils.dict_from_cookiejar(session.cookies))
+print('html', r.text)
+# SWS = 332489; first four are town code
+# 02200000090030000000
+
+printkey = str(pin).strip(str(swis))
+SEARCH_URL = ''.join([BASE_URL, '/propdetail.aspx?'])
+prop_search = '&'.join(['swis={}'.format(swis), 'printkey={}'.format(printkey)])
+full_url = SEARCH_URL + prop_search
+print(full_url)
+cookie = {'ASP.NET_SessionID', '2cirhr450bpqzs551bf4tn45'}
+response = requests.get(full_url, cookies=cookie)
+response.raise_for_status()
+
+print(response.content)

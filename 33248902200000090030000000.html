@@ -1,0 +1,608 @@
+ 
+
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+<html>
+   <head>
+      <meta http-equiv="X-UA-Compatible" content="IE=EmulateIE7" />
+      <title>Property Details - Image Mate Online</title>
+      <link media="print" href="styles/printersheet.css" type="text/css" rel="stylesheet" />
+      <link href="styles/imostyle.css" type="text/css" rel="stylesheet" />
+      <link href="styles/propdetail.css" type="text/css" rel="stylesheet" />
+      <style type="text/css" media="all">
+         #pnlResButtons p, #pnlComButtons p {
+            text-align: center;
+         }
+         #tblPropertyInfo td.headerTD {
+            padding-left: 3px;
+         }
+         #tblPropertyInfo td.dataTD {
+            padding-left: 1em;
+         }
+      </style>
+      <style type="text/css" media="all">
+	body {
+		font-family: helvetica;
+	}
+	.map_container {
+		width: 175px;
+		height: 350px	;
+	}
+	#map_canvas_cont, #pano_cont {
+		width: 100%;
+		height: 50%;
+		margin: 2px;
+	}
+
+	#pano, #map_canvas {
+		width: 100%;
+		height: 100%;
+	}
+
+    span.tab1 {padding-left: 1.3em;}
+    span.tab2 {padding-left: 2.6em;}
+    span.tab3 {padding-left: 3.0em;}
+</style>
+    
+      <script type="text/javascript" src="javascript/jquery-1.2.6.min.js"></script>
+      <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js" type="text/javascript"></script>	
+      <script type="text/javascript" src="http://maps.google.com/maps/api/js?sensor=false&region=us"></script>
+      <script type="text/javascript" src="javascript/propdetail-photo.js"></script>
+            <script type="text/javascript">
+      	var address ='26 Clinton St, Cornwall, NY';;  
+      </script>
+      <script type="text/javascript" src="javascript/streetview.js">
+      	
+      </script>
+
+      <script type="text/javascript" language="javascript">
+         function goToReport(siteType) {
+            var resSiteNum = 0;
+            var comSiteNum = 1;
+           
+            var reportURL = 'report.aspx?file=' + _currentPhotoFile +
+                            '&swiscode=332489&printkey=02200000090030000000' +
+                            '&sitetype=' + siteType;
+            reportURL += '&siteNum=' + (siteType == 'res' ? resSiteNum : comSiteNum);
+           
+            window.location = reportURL;
+         }
+      </script>
+   </head>
+   <body>
+      <form name="Form1" method="post" action="propdetail.aspx?swis=332489&amp;printkey=02200000090030000000" id="Form1">
+<input type="hidden" name="__VIEWSTATE" id="__VIEWSTATE" value="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" />
+
+<input type="hidden" name="__EVENTVALIDATION" id="__EVENTVALIDATION" value="/wEWCALl27enAwKcie7PCQKl7/vuBQK9ooeYDALnm5DPDwK1/sqrAQLQvuf9AgKPh4L9BRPc/Pgs8LtQDcFkJt71KWlbXF/F" />
+         
+<script type="text/javascript">
+//<!--
+function openWindow(NewUrl){
+	var newWin;
+	newWin = window.open(NewUrl, 'display');
+	if (window.focus) {newWin.focus();}
+}
+
+function openHelp(HelpUrl)
+{	
+	var helpWin = window.open(HelpUrl, 'help', 
+	                          'width=800,height=600,scrollbars,toolbar');
+	if (window.focus) {
+	   helpWin.focus();
+	}
+}
+
+//window.onerror = function() {return true;}
+//-->
+</script>
+<script type="text/javascript" src="/imate/javascript/dropdown.js"></script>
+<!--[if lt IE 8]>
+<script type="text/javascript" src="/imate/javascript/common.js"></script>
+<script type="text/javascript">
+  addEvent(window, "load", fixIE, false);
+</script>
+<![endif]-->
+
+
+<script type="text/javascript">
+// <!--
+
+  function setupGisLinkForNewWindow() {
+    var gisLink = document.getElementById('gisLink');
+    if (gisLink) {
+      gisLink.onclick = openGisToFullExtent;
+    }
+  }
+  
+  function openGisToFullExtent() {
+    // We need to get the URL from the existing link because it includes the
+    // site's root URL
+    var gisLink = document.getElementById('gisLink');
+    var url = gisLink.href;
+    
+    // Note: the "gisWindow" ID is the same as the one used by the GIS pin
+    // button on the property details page
+    var gisWindow = window.open(url, 'gisWindow');
+    gisWindow.focus();
+    return false;
+  }
+
+// -->
+</script>
+
+
+<div id="header">
+    <table id="Linkbar1_tblSeals" border="0">
+	<tr>
+		<td width="33%"><h2 style="margin:0;line-height:1.5em;"><a href="http://www.co.orange.ny.us" target="_blank"><img src="/imate/images/countyseal33.jpg" alt="Orange County" /></a></h2></td><td><a href="http://www.sdgnys.com" target="_blank"><img src="/imate/images/logo.png" alt="SDG Logo" /></a></td><td></td>
+	</tr>
+</table>
+    
+    <div id="links">
+        <ul id="linksList">
+            <li class="menu">Navigation<ul><li><a href="/imate/search.aspx"  >Property Search</a></li><li><a href="/imate/propdetail.aspx?swis=332489&amp;printkey=02200000090030000000"  >Last Property</a></li></ul></li><li><a href="/imate/taxmaps.aspx"  >Tax Maps</a></li><li>|</li><li class="menu">DTF Links<ul><li><a href="/imate/assessmentinfo.aspx"  >Assessment Info</a></li><li><a href="http://www.orps.state.ny.us/cfapps/MuniPro/muni_theme/county/county.cfm?swis=33" target="_blank" >County Info</a></li><li><a href="http://www.tax.ny.gov/research/property/default.htm" target="_blank" >DTF Home Page</a></li><li><a href="http://www.tax.ny.gov/forms/orpts_cur_forms.htm" target="_blank" >DTF Forms</a></li><li><a href="http://www.tax.ny.gov/pit/property/exemption/index.htm" target="_blank" >DTF Exemptions</a></li><li><a href="http://www.tax.ny.gov/pit/property/contest/contestasmt.htm" target="_blank" >DTF Grievances</a></li></ul></li><li class="rightAlign"><a href="/imate/logout.aspx?passthrough=true"  >Log In</a></li><li class="rightAlign"><a href="javascript:openHelp('/imate/help/browser.aspx?page=propdetail')"  >Help</a></li>
+        </ul>
+        
+        <script type="text/javascript">setupGisLinkForNewWindow();</script>
+        
+    </div>
+</div>
+
+         <TABLE id="Table1" cellSpacing="1" cellPadding="8" width="100%" border="0">
+            <TR>
+               <TD style="width: 15%" vAlign="top">
+                  
+                  
+                  <div id="pnlComButtons">
+	
+                     <TABLE class="reportTable singleBlack" id="Table8" cellSpacing="1" cellPadding="15" border="0">
+                        <TR>
+                           <TD class="headerTD">
+                              <P>Commercial</P>
+                           </TD>
+                        </TR>
+                        <TR>
+                           <TD>
+                              <p>
+                                 <input type="submit" name="btnCTaxID" value="Property Info" id="btnCTaxID" class="btnLeft" /><BR>
+                                 <input type="submit" name="btnCOwner" value="Owner/Sales" id="btnCOwner" class="btnLeft" /><BR>
+                                 <input type="submit" name="btnCInventory" value="Inventory" id="btnCInventory" class="btnLeft" /><BR>
+                                 <input type="submit" name="btnCImprove" value="Improvements" id="btnCImprove" class="btnLeft" /><BR>
+                                 
+                              </p><p>
+                                 <input type="submit" name="btnCTaxInfo" value="Tax Info" id="btnCTaxInfo" class="btnLeft" /><br />
+                                 
+                                 
+                              </p>
+                              <p>
+                                  <input name="btnCReport" type="button" id="btnCReport" class="btnLeft" onclick="goToReport('com')" value="Report" />
+                                  <input type="submit" name="btnCComps" value="Comparables" id="btnCComps" class="btnLeft" /><BR>
+                               </p>
+                               <p></p>
+                           </TD>
+                        </TR>
+                     </TABLE>
+                     
+                  
+</div>
+                  
+                  
+                  <!-- begin new button creating -->
+                  
+                  <!-- end new button creation -->
+                 
+                  
+                  
+                  
+                   
+                  
+                  
+               </TD>
+               
+               <!-- Beginning of Center Panel -->
+               <td vAlign="top">
+               
+                  
+               
+                  <div id="pnlLabel" class="centerColumn">
+	
+                     <p class="reportSection" align="center">Municipality of <span id="lblMunic">Cornwall</span></p>
+                     <hr />
+                     <table id="tblPropertyInfo" class="reportTable singleBlack">
+                        <tr>
+                           <td class="headerTD leftalign" width="15%">SWIS:</td>
+                           <td class="dataTD" width="25%"><span id="lblSwis">332489</span></td>
+                           <td class="headerTD leftalign" width="25%">Tax ID:</td>
+                           <td class="dataTD" width="35%"><span id="lblTaxID">22-9-3</span></td>
+                        </tr>
+                        <!---->
+                     </table>
+                     <hr />
+                  
+</div>
+                  
+                   
+                   
+                  
+                    
+                  
+                  
+                  
+                   
+                  
+                  
+                  <div id="pnlRTaxID" class="centerColumn">
+	
+                     <p class="reportSection" align="center">Tax Map ID / Property Data</p>
+                     <table class="reportTable singleBlack">
+                        <tr>
+                           <td class="headerTD leftalign" width="25%">Status:</td>
+                           <td class="dataTD" width="25%"><span id="lblStatus">Active</span></td>
+                           <td class="headerTD leftalign" width="25%">Roll Section:</td>
+                           <td class="dataTD" width="25%"><span id="lblRollSection">Taxable</span></td>
+                        </tr>
+                        <tr>
+                           <td class="headerTD leftalign" width="25%">Address:</td>
+                           <td class="dataTD" colSpan="3"><span id="lblAddress">26 Clinton St</span></td>
+                        </tr>
+                        <tr>
+                           <td class="headerTD leftalign" width="25%">Property Class:</td>
+                           <td class="dataTD" width="25%"><span id="lblBasePropClass">411 - Apartment</span></td>
+                           <td class="headerTD leftalign" width="25%">Site Property Class:</td>
+                           <td class="dataTD" width="25%"><span id="lblSitePropClass">411 - Apartment      </span></td>
+                        </tr>
+                        <tr>
+                           <td class="headerTD leftalign" width="25%">Ownership Code:</td>
+                           <td class="dataTD" colSpan="3"><span id="lblOwnerShipCode"></span></td>
+                        </tr>
+                       
+                        <tr>
+                        
+                           <td class="headerTD leftalign" width="25%">Site:</td>
+                           <td class="dataTD" width="25%"><span id="lblSite">Com 1</span></td>
+                            
+                           <td class="headerTD leftalign" width="25%">In Ag. District:</td>
+                           <td class="dataTD" width="25%"><span id="lblAgDistrict">No</span></td>
+                           
+                           
+                        </tr>
+                        
+                        <tr>
+                           <td class="headerTD leftalign" width="25%">Zoning Code:</td>
+                           <td class="dataTD" width="25%"><span id="lblZoningCode"> - </span></td>
+                           <td class="headerTD leftalign" width="25%">Bldg. Style:</td>
+                           <td class="dataTD" width="25%"><span id="lblBldgStyle">Not Applicable</span></td>
+                        </tr>
+                        <tr>
+                           <td class="headerTD leftalign" width="25%">Neighborhood:</td>
+                           <td class="dataTD" width="25%"><span id="lblNeighborhood">00007 - </span></td>
+                           <td class="headerTD leftalign" width="25%">School District:</td>
+                           <td class="dataTD" width="25%"><span id="lblSchoolDist">Cornwall</span></td>
+                        </tr>
+                        <!--<div id="pnlLegalPropDesc">
+		-->
+                        <tr>
+                           <td class="headerTD leftalign" width="25%">Legal Property Description:</td>
+                           <td class="dataTD" width="25%" colSpan="3"><span id="lblLglPropDesc">Legal description not given for property</span></td>
+                        </tr>
+                        <!--
+	</div>-->
+                        <tr>
+                           <td class="headerTD leftalign" width="25%">Total Acreage/Size:</td>
+                           <td class="dataTD"><span id="lblTotalAcreage">0.79</span></td>
+                           <td class="headerTD leftalign" width="25%">Equalization Rate:</td>
+                           <td class="dataTD"><span id="lblEqualizationRate">&nbsp;----</span></td>
+                        </tr>
+                        <tr>
+                           <td class="headerTD leftalign" width="25%">Land Assessment:</td>
+                           <td class="dataTD" width="25%"><span id="lblLandAssess">2016 - $48,600</span></td>
+                           <td class="headerTD leftalign" width="25%">Total Assessment:</td>
+                           <td class="dataTD" width="25%"><span id="lblTotalAssess">2016 - $242,500</span></td>
+                        </tr>
+                        <tr>
+                           <td class="headerTD leftalign" width="25%">Full Market Value:</td>
+                           <td class="dataTD"><span id="lblFullMarketValue">2016 - $329,800</span></td>
+                           
+                            <td class="headerTD leftalign" width="25%"></td>
+                           <td class="dataTD"><span id="lblNoPerSqFt"></span></td>
+                           
+                        </tr>
+                        <tr>
+                           <td class="headerTD leftalign" width="25%">Deed Book:</td>
+                           <td class="dataTD" width="25%"><span id="lblDeedBook">12305</span></td>
+                           <td class="headerTD leftalign" width="25%">Deed Page:</td>
+                           <td class="dataTD" width="25%"><span id="lblDeedPage">1488</span></td>
+                        </tr>
+                        <tr>
+                           <td class="headerTD leftalign" width="25%">Grid East:</td>
+                           <td class="dataTD" width="25%"><span id="lblGridEast">0</span></td>
+                           <td class="headerTD leftalign" width="25%">Grid North:</td>
+                           <td class="dataTD" width="25%"><span id="lblGridNorth">0</span></td>
+                        </tr>
+                        <!--<div id="pnlBankCode">
+		-->
+                        <tr>
+                           <td class="headerTD leftalign" width="25%">Bank Code:</td>
+                           <td class="dataTD" width="25%" colSpan="3"><span id="lblBankCode">C130041</span></td>
+                        </tr>
+                        <!--
+	</div>-->
+                     </table>
+                     
+                     <hr>
+                     
+                                          
+                     <!-- Special Districts -->
+                     
+
+<div id="ucSpecialDistricts" class="report_section">
+
+   <p class="reportSection">Special Districts for 2016<br />
+      <span style="color: #990000"></span></p>
+
+   
+   <table class="reportTable singleBlack" width="100%">
+      <tr>
+         
+         <td class="headerTD">Description</td>
+         
+         <td class="headerTD">Units</td>
+         
+         <td class="headerTD">Percent</td>
+         
+         <td class="headerTD">Type</td>
+         
+         <td class="headerTD">Value</td>
+         
+      </tr>
+      
+      <tr>
+         
+         <td class="dataTD">AM001-Cornwall ambul dist </td>
+         
+         <td class="dataTD">0</td>
+         
+         <td class="dataTD">0%</td>
+         
+         <td class="dataTD"></td>
+         
+         <td class="dataTD">0</td>
+         
+      </tr>
+      
+      <tr>
+         
+         <td class="dataTD">FD003-Canterbury fire     </td>
+         
+         <td class="dataTD">0</td>
+         
+         <td class="dataTD">0%</td>
+         
+         <td class="dataTD"></td>
+         
+         <td class="dataTD">0</td>
+         
+      </tr>
+      
+      <tr>
+         
+         <td class="dataTD">HY001-Cornwall hydrant    </td>
+         
+         <td class="dataTD">0</td>
+         
+         <td class="dataTD">0%</td>
+         
+         <td class="dataTD"></td>
+         
+         <td class="dataTD">0</td>
+         
+      </tr>
+      
+      <tr>
+         
+         <td class="dataTD">LT005-Cornwall lt         </td>
+         
+         <td class="dataTD">0</td>
+         
+         <td class="dataTD">0%</td>
+         
+         <td class="dataTD"></td>
+         
+         <td class="dataTD">0</td>
+         
+      </tr>
+      
+      <tr>
+         
+         <td class="dataTD">RG010-Cornwall refuse     </td>
+         
+         <td class="dataTD">34</td>
+         
+         <td class="dataTD">0%</td>
+         
+         <td class="dataTD"></td>
+         
+         <td class="dataTD">0</td>
+         
+      </tr>
+      
+      <tr>
+         
+         <td class="dataTD">SW001-Cornwall swr o&m    </td>
+         
+         <td class="dataTD">0</td>
+         
+         <td class="dataTD">0%</td>
+         
+         <td class="dataTD"></td>
+         
+         <td class="dataTD">0</td>
+         
+      </tr>
+      
+      <tr>
+         
+         <td class="dataTD">SW005-Cornwall swr cost   </td>
+         
+         <td class="dataTD">0</td>
+         
+         <td class="dataTD">0%</td>
+         
+         <td class="dataTD"></td>
+         
+         <td class="dataTD">0</td>
+         
+      </tr>
+      
+   </table>
+   
+</div>
+
+                     <hr>
+
+                     <!-- Taxable Values -->
+                     
+                     
+                  
+                     <!-- Land Types -->
+                     <p class="reportSection">Land Types</p>
+                     <p>
+                        <table id="tblLandTypes" class="reportTable singleBlack" border="0" width="100%">
+		<tr>
+			<td class="headerTD">Type</td><td class="headerTD" width="30%">Size</td>
+		</tr><tr>
+			<td class="dataTD">Primary</td><td class="dataTD" style="text-align:center;">0.79&nbsp;acres</td>
+		</tr>
+	</table>
+                     </p>
+                     
+                     
+                     <!-- BAS History -->
+                     
+                  
+</div>
+                  
+                  
+                  
+                  
+                  
+                  
+                  
+                  
+               </td>
+               <!-- End of Center Panel -->
+               
+               <td valign="top" style="width: 25%">
+
+                  
+
+                  <!-- PHOTOS -->
+                  
+                  <div id="pnlPhotos">
+	
+                     <table class="reportTable singleBlack" cellpadding="15" width="300" border="0">
+                        <tr>
+                           <td class="headerTD" style="height: 18px">Photographs</td>
+                        </tr>
+                        <tr>
+                           <td align="center">
+                              <p id="photoInstructions">(Click on photo to enlarge it.)</p>
+                              
+                              <div id="pnlPhotoView">
+		<a href="bigPhoto.aspx?file=3324/T000008/332489022000000900300000000001.jpg&swis=332489&sbl=02200000090030000000&printkey=22-9-3&photoindex=1" target="_blank"><img src="quickstream.aspx?thumb=true&amp;width=200&amp;height=150&amp;file=3324/T000008/332489022000000900300000000001.jpg" alt="52#5" border="0" /></a>
+	</div>
+                              
+                              <p id="photoCommentLabel">
+                                <span id="lblPhotoComment">Photo</span>
+                              </p>
+                              
+                              
+                           </td>
+                        </tr>
+                     </table>
+                  
+</div><BR>
+
+                  <!-- JIT (Just In Time) TAX BILLS :: Tax Bills created "On the fly" -->
+                  
+
+                  
+
+                  <!-- END ... Mark Added Panel for Available Tax Bills -->
+                  
+                  <!-- PICTOMETRY LIVELINK -->
+                  <div id="pnlLiveLink">
+	
+                     <div id="liveLink" class="sideSection">
+                        <p class="sideSectionTitle">Pictometry LiveLink</p>
+                        <p id="noLiveLinkImageryMsg">No
+                           Pictometry imagery exists for this property.</p>
+                        <p></p>
+                        <p></p>
+                     </div>
+                  
+</div>
+                  
+
+                  <!-- HISTORIC LINKS -->
+                  
+
+                  <!-- DOCUMENTS -->
+                  <div id="pnlDocs">
+	
+                     <div id="documents" class="sideSection">
+                        <p class="sideSectionTitle">Documents</p>
+                        <p><span id="lblDocuments">No documents found
+                           for this parcel</span></p>
+                     </div>
+                  
+</div>
+                  
+                  <div id="pnlMaps">
+	
+                     <br>
+                     <TABLE class="reportTable singleBlack" id="tblMaps" cellPadding="15" width="100%">
+                        <TR>
+                           <TD class="headerTD">Maps</TD>
+                        </TR>
+                        <TR>
+                           <TD align="center">
+                              <span id="lblPurchaseTM"></span>
+                              
+                              <a id="lnkTaxMap" class="buttonLink" href="quickstream.aspx?file=PDFMAPS/332489/022000.pdf" target="_blank">View Tax Map</a>
+                              
+                              
+                              
+                              <a id="lnkGoogleMapsLink" class="buttonLink" href="http://maps.google.com/?ie=UTF8&amp;hl=en&amp;f=q&amp;sampleq=1&amp;q=26+Clinton+St+Cornwall+NY+" target="_blank">View in Google Maps</a>
+                              <!-- -->
+                              <a id="lnkBingMapsLink" class="buttonLink" href="http://www.bing.com/maps/default.aspx?v=2&amp;where1=26%20Clinton%20St%20Cornwall%20NY%20" target="_blank">View in Bing Maps</a>&nbsp;
+
+                              <SCRIPT language="javascript">
+										<!-- // BEGIN
+										
+										function showDisclaimer() {
+											window.alert('Map Disclaimer: Google Maps, Bing Maps ' +
+														 'and Yahoo Maps buttons link to third party sites and ' +
+														 'as such SDG, its clients, and partners make no representations ' +
+														 'or warranties regarding the accuracy or completeness of the ' +
+														 'information provided while using them. These links should not ' +
+														 'be used in any way to perform any task where exact accuracy ' +
+														 'would be necessary and should be considered for informational ' +
+														 'purposes only.');
+											return false;
+										}
+										
+										// END -->
+                              </SCRIPT>
+                            <a id="hlinkMapDisclaimer" onclick="return showDisclaimer();" href="#">Map Disclaimer</a>
+                           </TD>
+                        </TR>
+                     </TABLE>
+                  
+</div>
+            
+               </TD>
+            </TR>
+         </TABLE>
+      </form>
+   </body>
+</html>
