@@ -38,7 +38,7 @@ driver = Firefox()
 driver.get(cookie_url)
 link = driver.find_element_by_class_name('ApplyClass')
 link.click()
-# response = driver.get(full_url)
+response = driver.get(full_url)
 response = driver.request('GET', full_url)
 print(response)
 
