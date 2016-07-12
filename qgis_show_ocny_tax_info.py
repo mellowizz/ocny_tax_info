@@ -33,10 +33,10 @@ def show_tax_info(pin, feature, parent):
             br.follow_link(link)
             break
 
-    swis = str(pin)[0:6]
-    printkey = str(pin).strip(str(swis))
-    search_terms = 'swis={}&printkey={}'.format(swis, printkey)])
-    full_url = '?'.join([url, search_terms]
+    swis = str(pin)[:6]
+    printkey = str(pin)[6:]
+    search_terms = 'swis={}&printkey={}'.format(swis, printkey)
+    full_url = '?'.join([url, search_terms])
 
     response = br.open(full_url)
     return response.read()
