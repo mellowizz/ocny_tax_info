@@ -1,0 +1,4 @@
+This repository contains a script that can be added as a function in the tooltips feature in QGIS to display the tax information for the current parcel.
+This script looks up the tax id (must be default) and queries Orange County's tax database.
+
+Works on 2.2.. Porting to QGIS3 underway
